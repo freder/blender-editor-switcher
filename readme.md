@@ -2,4 +2,4 @@
 
 hit <code>alt-&#96;</code> to quickly switch to a different editor type.
 
-![](./screenshot.png)
+![](./screenshot.gif)

@@ -34,15 +34,3 @@ class EditorSwitcherPieMenu(Menu):
 		layout = self.layout
 		pie = layout.menu_pie()
 		pie.operator_enum(EditorSwitcherPieMenuOptions.bl_idname, 'selected_mode')
-
-
-# def register():
-# 	bpy.utils.register_module(__name__)
-
-
-# def unregister():
-# 	bpy.utils.unregister_module(__name__)
-
-
-# if __name__ == '__main__':
-# 	register()

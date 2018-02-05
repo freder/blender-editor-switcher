@@ -23,7 +23,6 @@ class EditorSwitcherOperator(bpy.types.Operator):
 		return {'FINISHED'}
 
 
-# store keymaps here to access after registration
 addon_keymaps = []
 
 
@@ -32,7 +31,6 @@ def register():
 	bpy.utils.register_class(EditorSwitcherPieMenuOptions)
 	bpy.utils.register_class(EditorSwitcherOperator)
 
-	# handle the keymap
 	wm = bpy.context.window_manager
 	km = wm.keyconfigs.addon.keymaps.new(
 		name='Window',
@@ -54,12 +52,9 @@ def unregister():
 	bpy.utils.unregister_class(EditorSwitcherPieMenuOptions)
 	bpy.utils.unregister_class(EditorSwitcherOperator)
 
-	# handle the keymap
 	wm = bpy.context.window_manager
 	for km in addon_keymaps:
 		wm.keyconfigs.addon.keymaps.remove(km)
-
-	# clear the list
 	del addon_keymaps[:]
 
 

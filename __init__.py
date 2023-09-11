@@ -13,6 +13,7 @@ bl_info = {
 }
 
 
+# https://wiki.blender.org/wiki/Reference/Release_Notes/2.80/Python_API/Addons
 class ADDON_OT_call_menu(bpy.types.Operator):
 	bl_idname = 'addon.call_menu'
 	bl_label = 'Editor Switcher'
